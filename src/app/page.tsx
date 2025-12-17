@@ -1,14 +1,14 @@
-import Hero from "@/components/Hero";
-import Skills from "@/components/Skills";
-import Projects from "@/components/Projects";
-import Experience from "@/components/Experience";
-import Contact from "@/components/Contact";
+import Hero from "@/components/sections/Hero";
+import AboutMe from "@/components/sections/AboutMe";
+import Projects from "@/components/sections/Projects";
+import Experience from "@/components/sections/Experience";
+import Contact from "@/components/sections/Contact";
 
 export default function Home() {
   return (
     <main className="max-w-5xl mx-auto px-6">
       <Hero />
-      <Skills />
+      <AboutMe />
       <Projects />
       <Experience />
       <Contact />
