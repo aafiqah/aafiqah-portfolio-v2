@@ -8,7 +8,7 @@ import LiquidGlass from "@/components/ui/liquid-glass";
 import logo from "@/assets/logos/logo.svg";
 
 const navItems = [
-  { label: "Home", href: "#hero" },
+  { label: "Home", href: "#home" },
   { label: "About Me", href: "#aboutMe" },
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
@@ -16,7 +16,7 @@ const navItems = [
 ];
 
 export default function Navbar() {
-  const [active, setActive] = useState("#hero");
+  const [active, setActive] = useState("#home");
 
   useEffect(() => {
     const onScroll = () => {
@@ -39,7 +39,7 @@ export default function Navbar() {
     <header className="sticky top-5 z-50 flex justify-center">
       <LiquidGlass className="inline-flex items-center gap-6 px-6 h-20 rounded-full">
         {/* Logo */}
-        <Link href="#hero" className="flex items-center gap-2">
+        <Link href="#home" className="flex items-center gap-2">
           <Image src={logo} alt="Alessa Logo" width={40} height={40} />
           <span className="font-bold text-lg">Alessa</span>
         </Link>

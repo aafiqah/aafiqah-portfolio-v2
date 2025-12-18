@@ -2,7 +2,7 @@ import ThemeToggle from "../theme/theme-toggle";
 
 export default function Hero() {
   return (
-    <section id="hero" className="min-h-screen flex flex-col justify-center gap-6">
+    <section id="home" className="min-h-screen flex flex-col justify-center gap-6">
       
       <h1 className="text-4xl md:text-5xl font-bold">
         Hi, I’m <span className="text-blue-500">Alessa Afiqah Johar</span> 👋
