@@ -10,8 +10,8 @@ import logo from "@/assets/logos/logo.svg";
 const navItems = [
   { label: "Home", href: "#home" },
   { label: "About Me", href: "#aboutMe" },
-  { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
+  { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -37,7 +37,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-5 z-50 flex justify-center">
-      <LiquidGlass className="inline-flex items-center gap-6 px-6 h-20 rounded-full">
+      <LiquidGlass className="inline-flex items-center gap-6 px-6 h-18 rounded-full">
         {/* Logo */}
         <Link href="#home" className="flex items-center gap-2">
           <Image src={logo} alt="Alessa Logo" width={40} height={40} />
