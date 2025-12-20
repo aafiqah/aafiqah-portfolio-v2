@@ -169,7 +169,7 @@ export default function Projects() {
       {/* Filters + Sort */}
       <div className="flex flex-wrap items-center justify-between gap-4 mb-14">
         {/* Categories */}
-        <div className="flex gap-4 flex-wrap text-sm font-medium">
+        <div className="flex gap-4 flex-wrap justify-center text-sm font-medium w-full">
           {categories.map((cat) => (
             <button
               key={cat}
