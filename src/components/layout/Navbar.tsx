@@ -5,14 +5,13 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import ThemeToggle from "@/components/theme/theme-toggle";
 import LiquidGlass from "@/components/ui/liquid-glass";
-import logo from "@/assets/logos/logo.svg";
 
 const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "About Me", href: "#aboutMe" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "About Me", href: "/#aboutMe" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -21,12 +20,18 @@ export default function Navbar() {
   useEffect(() => {
     const onScroll = () => {
       const y = window.scrollY + 120;
+
       navItems.forEach((item) => {
-        const el = document.querySelector(item.href);
+        const id = item.href.replace("/#", "#");
+        const el = document.querySelector(id);
         if (!el) return;
+
         const top = el.getBoundingClientRect().top + window.scrollY;
         const bottom = top + el.clientHeight;
-        if (y >= top && y < bottom) setActive(item.href);
+
+        if (y >= top && y < bottom) {
+          setActive(item.href);
+        }
       });
     };
 
@@ -40,7 +45,7 @@ export default function Navbar() {
       <LiquidGlass className="inline-flex items-center gap-6 px-6 h-18 rounded-full">
         {/* Logo */}
         <Link href="#home" className="flex items-center gap-2">
-          <Image src={logo} alt="Alessa Logo" width={40} height={40} />
+          <Image src="/assets/logos/logo.svg" alt="Alessa Logo" width={40} height={40} />
           <span className="font-bold text-lg">Alessa</span>
         </Link>
 
