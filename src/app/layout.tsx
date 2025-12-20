@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: "Welcome to My Site",
     images: [
       {
-        url: "/og.png",
+        url: "/assets/images/og.png",
         width: 1200,
         height: 630,
         alt: "Alessa Portfolio",
