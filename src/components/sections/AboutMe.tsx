@@ -21,7 +21,7 @@ const technologies = [
 export default function AboutMe() {
   return (
     <section id="aboutMe" className="min-h-screen flex flex-col justify-center gap-6">
-          <h3 className="text-2xl font-bold">About Me</h3>
+          <h3 className="text-center text-2xl font-bold">About Me</h3>
 
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
             🚀 Hi, I’m Alessa, a Flutter Mobile Developer with hands-on experience
