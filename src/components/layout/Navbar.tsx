@@ -15,9 +15,10 @@ const navItems = [
 ];
 
 export default function Navbar() {
-  const [active, setActive] = useState("#home");
+  const [active, setActive] = useState("/#home");
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  // 🔍 Scroll spy
   useEffect(() => {
     const onScroll = () => {
       const y = window.scrollY + 120;
@@ -38,6 +39,7 @@ export default function Navbar() {
 
     window.addEventListener("scroll", onScroll);
     onScroll();
+
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -46,17 +48,27 @@ export default function Navbar() {
       <div className="relative">
         <LiquidGlass className="inline-flex items-center gap-4 px-6 h-18 rounded-full">
           {/* Logo */}
-          <Link href="#home" className="flex items-center gap-2">
-            <Image src="/assets/logos/logo.svg" alt="Alessa Logo" width={40} height={40} />
+          <Link
+            href="/"
+            onClick={() => setActive("/#home")}
+            className="flex items-center gap-2"
+          >
+            <Image
+              src="/assets/logos/logo.svg"
+              alt="Alessa Logo"
+              width={40}
+              height={40}
+            />
             <span className="font-bold text-lg">Alessa</span>
           </Link>
 
-          {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-2">
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex items-center gap-2">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
+                onClick={() => setActive(item.href)}
                 className={`
                   px-4 py-2 rounded-full text-sm transition-all
                   ${
@@ -69,14 +81,22 @@ export default function Navbar() {
                 {item.label}
               </Link>
             ))}
-          </div>
+          </nav>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden p-2 rounded-full hover:bg-white/20 transition"
+            aria-label="Toggle menu"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
               <line x1="3" y1="6" x2="21" y2="6" />
               <line x1="3" y1="12" x2="21" y2="12" />
               <line x1="3" y1="18" x2="21" y2="18" />
@@ -94,7 +114,10 @@ export default function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={() => {
+                    setActive(item.href);
+                    setMobileOpen(false);
+                  }}
                   className={`
                     block px-4 py-3 rounded-xl text-sm transition
                     ${
