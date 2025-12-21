@@ -97,7 +97,7 @@ export default function ExperienceTabs() {
 
   return (
     <section id="experience" className="min-h-screen max-w-6xl mx-auto py-35">
-      <h3 className="text-2xl font-bold mb-10">My Journey</h3>
+      <h3 className="text-center text-2xl font-bold mb-10">My Journey</h3>
 
       <div className="flex flex-col md:flex-row gap-6">
         {/* Left company list */}
