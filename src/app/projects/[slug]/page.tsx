@@ -89,7 +89,7 @@ export default function ProjectPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-6 py-3 rounded-full
                           bg-gray-100 dark:bg-neutral-800 text-gray-700 dark:text-gray-300
-                          hover:bg-blue-500 hover:text-white transition"
+                          hover:bg-blue-500 hover:dark:bg-blue-500 hover:text-white transition"
               >
                 <Image src="/assets/icons/figma.svg" alt="Figma" width={20} height={20} />
                 View Design on Figma
@@ -105,7 +105,7 @@ export default function ProjectPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-6 py-3 rounded-full
                           bg-gray-100 dark:bg-neutral-800 text-gray-700 dark:text-gray-300
-                          hover:bg-blue-500 hover:text-white transition"
+                          hover:bg-blue-500 hover:dark:bg-blue-500 hover:text-white transition"
               >
                 <Image src="/assets/icons/github.svg" alt="GitHub" width={20} height={20} />
                 View Source Code
@@ -121,7 +121,7 @@ export default function ProjectPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-6 py-3 rounded-full
                           bg-gray-100 dark:bg-neutral-800 text-gray-700 dark:text-gray-300
-                          hover:bg-blue-500 hover:text-white transition"
+                          hover:bg-blue-500 hover:dark:bg-blue-500 hover:text-white transition"
               >
                 <Image src="/assets/icons/youtube.svg" alt="YouTube" width={20} height={20} />
                 Watch Demo
@@ -137,7 +137,7 @@ export default function ProjectPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-6 py-3 rounded-full
                           bg-gray-100 dark:bg-neutral-800 text-gray-700 dark:text-gray-300
-                          hover:bg-blue-500 hover:text-white transition"
+                          hover:bg-blue-500 hover:dark:bg-blue-500 hover:text-white transition"
               >
                 <Image src="/assets/icons/external.svg" alt="External" width={20} height={20} />
                 Visit Website
